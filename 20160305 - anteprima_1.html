@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @font-face {
+                    font-family: ArchitetsDauther;
+                    src: url("fonts/ArchitectsDaughter.ttf");
+            }
+            
+            
+            @font-face {
+                font-family: Bilbo;
+                src: url("fonts/Blokletters-Balpen.ttf");
+                        }
+            /*
+            @font-face {
+                    font-family: Gotham-Light;
+                    src: url("fonts/Gotham-Light.otf");
+            }
+
+            @font-face {
+                    font-family: Gotham-Medium;
+                    src: url("fonts/Gotham-Medium.ttf");
+                    font-weight: 500;
+            }
+
+            @font-face {
+                    font-family: Gotham-Bold;
+                    src: url("fonts/Gotham-Bold.otf");
+                    font-weight: bold;
+            }
+
+
+            @font-face {
+                    font-family: Arcon;
+                    src: url("fonts/Arcon-Regular.otf");
+                    font-weight: normal;
+            }
+            
+            @font-face {
+                    font-family: Quicksand-Light;
+                    src: url("fonts/Quicksand-Light.otf");
+                    font-weight: lighter;
+            }
+            
+            */
+            * {
+                border: 0px;
+                padding: 0px;
+                margin: 0px;
+
+            }
+
+            div.foto {
+                width: 7cm;
+                height: 9cm;
+                margin: 0.25cm;
+                position:   relative;
+                left: 0cm;
+                top: 0cm;
+                overflow: hidden;
+            }
+            div.foto img {
+                width: 100%;
+                height: auto;
+
+            }
+            .contenitore {
+                width: 7.6cm;
+                height: 11.6cm;
+                border: 0.05cm solid white;
+
+                float: left;
+                display: block;
+                margin: 0.0cm;
+            }
+
+
+            .imgStemma {
+                vertical-align: central;
+                width: 1.5cm;
+                height: auto;
+                padding-left: 5px;
+
+            }
+
+            .dettagli{
+                width: 6cm;
+                height: 1.8cm;
+
+            }
+
+            div {
+                margin: 0cm;
+
+            }
+            body {
+                width: 15.5cm;
+                background-color: #f5f5fa;
+                margin-left: 0.3cm;
+                margin-top: 0.3cm;
+               /* border: 4px #0066ff solid;
+               */
+            }
+            .dettagli {
+                width: 100%;
+                height: 2.0cm;
+            }
+            .stemma{
+                width: 1.8cm;
+                height: 2.2cm;
+                float: left;
+
+            }
+            .classecat {
+                font-size: 6px;
+                margin-left: 0.2cm;
+                margin-top: 0;
+                padding: 0;
+                border: 0;
+                /* text-align: center;
+                */
+            }
+            .testi{
+                width: calc(100% - (1.8cm + 0.3cm));
+                height: 100%;
+                float: left;
+                /* background-color: lawngreen;
+                */
+            }
+           
+            .stampaArciere {
+                font-size: 12px;
+                text-align: center;
+                width: 100%;
+                /*background-color: orange;
+                */height: 35%;
+                font-family: Bilbo;
+                font-style: normal;
+                
+                padding-top: 0.05cm;
+                box-sizing: border-box;
+                padding-left: 0.15cm;
+                padding-right: 0.15cm;
+                padding-bottom: 0.05cm;
+                
+                
+
+            }
+
+            .stampaCompagnia {
+                box-sizing: border-box;
+                font-size: 17px;
+                text-align: center;
+                font-family: ArchitetsDauther;
+                font-weight: bold;
+                width: 100%;
+                height: 30%;
+                margin-bottom: 3px;
+            }
+
+            .stampaLuogo {
+                box-sizing: border-box;
+                font-size: 10px;
+                text-align: right;
+                font-family: ArchitetsDauther;
+                padding-left: 0.1cm;
+                padding-right: 0.1cm;
+            }
+
+            .cleardiv {
+                clear: both;
+            }
+            .orizzontale {
+                width: 99%;
+                height: 0.03cm;
+                clear: both;
+                border: none;
+                background-color: orange;
+                margin: 0;
+            }
+            .orizz-chiaro {
+                height: 100%;
+                width: 35%;
+                background-color: white;
+                float: left;
+                border: none;
+                margin: 0;
+            }
+
+            .orizz-scuro {
+                height: 100%;
+                width: 10%;
+                background-color: lightgray;
+                float: left;
+                border: none;
+                margin: 0;
+            }
+
+            .verticale {
+                width: 0.02cm;
+                height:  11.7cm;
+                float: left;
+                border: none;
+                margin: 0;
+
+            }
+            .vert-chiaro { width: 100%;
+                background-color: white;
+                height: 90%;
+                border: none;
+            }
+            .vert-scuro {width: 100%;
+                background-color: lightgray;
+                height: 5%;
+                border:  none;
+            }
+            .saltoPagina {
+                width: 99%;
+                height: 1cm;
+                clear: both;
+                border: none;
+                margin: 0;
+                page-break-after: always;
+            }
+        </style>
+        
+    </head>
+    <body>
+
+    
+    
+    <script>
+function printDiv(divName) {
+      var printContents = document.getElementById(divName).innerHTML;     
+   var originalContents = document.body.innerHTML;       
+   document.body.innerHTML = printContents;      
+   window.print();      
+   document.body.innerHTML = originalContents;
+   }
+</script>
+
+ 
+    
+    
+    
+    
+<div style="height: 30px; width: 100%; background-color: #269abc; "> 
+        <input type='button' value='Stampa' onclick="printDiv('stampami');" style="width: 140px; height: 30px; position: absolute;"/>
+
+    </div>
+
+
+<div id="stampami"></div>
+    <script src="custom/js/AiroColaParameters.js" type="text/javascript"></script>
+        <script src="custom/js/AiroCola.js" type="text/javascript"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+
+        <script>
+            var target = '#stampami';
+
+            var loadDataArciere=  function(tessera, funzione) {
+                    var datastring = AiroCola.api_tools._prepareMethodAndParms("arcieriabbinati", {tessera:tessera});
+                    $.ajax({type: "GET",
+                                dataType: 'json',
+                                url: AiroCola.parameters.ApiRemoteServerName,
+                                data: datastring,
+                                async: false,
+                                crossDomain : true}
+                                ).done(funzione);
+                    };
+
+            var getFotoFrame = function(nome, cognome, classe, categoria, luogo, data, foto, riga) {
+
+                var snipet = "<div class='contenitore'>";
+                    snipet += "<div class='foto'> <img src='" + AiroCola.parameters.RemoteServerImages + foto + "' alt='" + foto + "'/></div>";
+                    snipet += "<div class='stemma'><img class='imgStemma' src='img/LogoAiro.png' alt='Stemma'/><div class='classecat'>" + classe + " " + categoria + "</div></div>";
+                    snipet += "<div class='dettagli'>";
+                    snipet += "<div class='testi'>";
+                   
+                    snipet += "<div id='stampaArciere" + riga + "' class='stampaArciere'>" + AiroCola.Tools.capitalize(nome) + " " + AiroCola.Tools.capitalize(cognome)  + "</div>";
+                    snipet += "<div class='stampaCompagnia'>Arcieri dell'Airone</div>";
+                    snipet += "<div class='stampaLuogo'>" + luogo + ", " + data + "</div>";
+                    
+                    snipet += "</div>";
+                    snipet += "<div class='cleardiv'></div>";
+                    snipet += "</div>";
+                    snipet += "</div>";
+                    return snipet;
+            };
+            var getSeparatoreV = function () {
+                var snipet = "<!-- INIZIO - Questo blocco serve per inserire le linee verticali di taglio -->";
+                    snipet += "<div class= 'verticale'>";
+                    snipet += "<div class='vert-scuro'></div>";
+                    snipet += "<div class='vert-chiaro'></div>";
+                    snipet += "<div class='vert-scuro'></div>";
+                    //snipet += "<div class='vert-scuro'></div>";
+                    snipet += "</div>";
+                    snipet += "<!-- FINE - Questo blocco serve per inserire le linee verticali di taglio -->";
+                return snipet;
+            };
+            var getSeparatoreO = function () {
+
+                var snipet = "<!-- INIZIO - Questo blocco serve per inserire le linee orizzontali di taglio -->";
+                    snipet += "<div class='orizzontale'>";
+                    snipet += "<div class='orizz-scuro'></div>";
+                    snipet += "<div class='orizz-chiaro'></div>";
+                    snipet += "<div class='orizz-scuro'></div>";
+                    snipet += "<div class='orizz-chiaro'></div>";
+                    snipet += "<div class='orizz-scuro'></div>";
+                    snipet += "</div>";
+                    snipet += "<!-- FINE - Questo blocco serve per inserire le linee orizzontali di taglio -->";
+                return snipet;
+            };
+            var getSaltoPagina = function(){
+                var snipet ="<div class='saltoPagina'></div>";
+                return snipet;
+            }
+            
+            // var listaTessere = $.param({tessere: "27247,11359,15837,20013,20433,11359,15837,20013,20433,20434"});
+
+            // var result = AiroCola.Tools.deparams(listaTessere);
+            var result = AiroCola.Tools.getQueryStringParam('tessere');
+
+            var parametri = result.split(',');
+          //  console.log(parametri);
+            var sepO = getSeparatoreO();
+            var sepV = getSeparatoreV();
+            var saltoPagina = getSaltoPagina();
+            var myparm = parametri.length;
+         //   $(target).append(saltoPagina);
+            $(target).append(sepO);
+            for (var x = 0; x<myparm; x++)
+            {
+
+
+                var arciere = {Nome: "", Cognome: "", Classe: "", Categoria: "", Foto: ""};
+                loadDataArciere(parametri[x], function(data){arciere = data.data[0];});
+
+              //  console.log(arciere);
+                var snipet = getFotoFrame(arciere.Nome, arciere.Cognome, arciere.Classe, arciere.Categoria, "Bisnate", AiroCola.Date.formatDate(), arciere.Foto, x);
+
+              $(target).append(sepV);
+              $(target).append(snipet);
+
+              if (!AiroCola.Tools.isPair(x)){
+                    $(target).append(sepV);
+                    $(target).append(sepO);
+
+               }
+               
+               if ((x+1) % 4 == 0) {
+                 //  $(target).append(saltoPagina);
+                   $(target).append(saltoPagina);
+                   $(target).append(sepO);
+               }
+
+           //     $(target).append(sepV);
+
+
+            }
+            if (!AiroCola.Tools.isPair(x)){
+                    $(target).append(sepV);
+                    $(target).append(sepO);
+
+               }
+ 
+
+        </script>
+        <<script type="text/javascript">
+            
+            $(document).ready(function(){            
+                        $.each($('.stampaArciere'), function(x, qualcosa) {
+                                var arciere='#' + qualcosa.id;
+                                var altezza = $(arciere).css('height');
+
+                                console.log(document.getElementById("stampaArciere0").offsetHeight);   });
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>File API esempio 1</title>
+ </head>
+ <body>
+ 
+     <form action="http://airolandia/airo/api/loadfile.php" method="post" enctype="multipart/form-data" id="my_form" target="hiddenframe">
+    <input type="file" name="my_file" id="my_file" multiple/>
+    <input type="submit" name="submit" value="Submit" />
+</form>
+     <iframe id="hiddenframe" name="hiddenframe"></iframe>
+     <script>
+         
+         document.forms[0].addEventListener('submit', function( evt ) {
+    var file = document.getElementById('my_file').files[0];
+ 
+    var regex = /^(image\/)(gif|(x-)?png|p?jpeg)$/i;
+ 
+    if( file && file.size < 1048576 && file.type.search(regex) != -1 ) { // 1MB
+        alert ('File size: ' + file.size + '; Mime-Type: ' + file.type + ' - Success!')
+    } else {
+        alert ('File Not Allowed!')
+        evt.preventDefault();
+    }
+}, false);
+         
+     </script>
+ </body>
+</html>
